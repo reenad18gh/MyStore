@@ -1,0 +1,36 @@
+<h2>Your Cart</h2>
+
+<div *ngIf="items.length === 0">
+  <p>Your cart is empty.</p>
+  <a routerLink="/">Go shopping</a>
+</div>
+
+<table *ngIf="items.length">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Qty</th>
+      <th>Price</th>
+      <th>Subtotal</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of items">
+      <td>{{ i.product.name }}</td>
+      <td>{{ i.quantity }}</td>
+      <td>{{ i.product.price | currency:'SAR' }}</td>
+      <td>{{ (i.product.price * i.quantity) | currency:'SAR' }}</td>
+      <td><button (click)="remove(i.product.id)">Remove</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="items.length" class="total">
+  <strong>Total: {{ total | currency:'SAR' }}</strong>
+</div>
+
+<div *ngIf="items.length" class="actions">
+  <button (click)="clear()">Clear Cart</button>
+  <button (click)="proceedCheckout()">Checkout</button>
+</div>
