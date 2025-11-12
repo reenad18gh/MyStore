@@ -1,0 +1,10 @@
+.topbar { display: flex; gap: 12px; align-items: center; padding: 10px 14px; background: #111; color: #fff; }
+.topbar a { color: #fff; text-decoration: none; }
+.topbar .spacer { flex: 1; }
+.container { padding: 16px; }
+button { padding: 6px 10px; }
+input { padding: 6px; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { border: 1px solid #eee; padding: 8px; text-align: left; }
+.actions { margin-top: 12px; display: flex; gap: 8px; }
+.total { margin-top: 10px; }
