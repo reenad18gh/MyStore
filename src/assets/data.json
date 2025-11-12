@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "Wireless Headphones", "price": 249, "description": "Bluetooth noise-cancelling", "image": "https://picsum.photos/seed/wh/300/200" },
+  { "id": 2, "name": "Laptop 16\"", "price": 3999, "description": "16GB RAM, 512GB SSD", "image": "https://picsum.photos/seed/laptop/300/200" },
+  { "id": 3, "name": "Smartphone", "price": 2999, "description": "AMOLED 120Hz", "image": "https://picsum.photos/seed/phone/300/200" },
+  { "id": 4, "name": "Smartwatch", "price": 899, "description": "HR, GPS, sleep tracking", "image": "https://picsum.photos/seed/watch/300/200" }
+]
