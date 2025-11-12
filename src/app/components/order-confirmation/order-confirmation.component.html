@@ -1,0 +1,12 @@
+<h2>Order Confirmation</h2>
+
+<div *ngIf="order; else noOrder">
+  <p>Thanks, {{ order.name }}.</p>
+  <p>Your order total is {{ order.total | currency:'SAR' }}.</p>
+  <a routerLink="/">Back to store</a>
+</div>
+
+<ng-template #noOrder>
+  <p>No order found.</p>
+  <a routerLink="/">Back to store</a>
+</ng-template>
