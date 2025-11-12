@@ -1,0 +1,16 @@
+<div *ngIf="product; else notFound" class="details">
+  <img *ngIf="product.image" [src]="product.image" [alt]="product.name" />
+  <div>
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <div class="row">
+      <span class="price">{{ product.price | currency:'SAR' }}</span>
+      <input type="number" min="1" [(ngModel)]="qty" />
+      <button (click)="add()">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #notFound>
+  <p>Product not found.</p>
+</ng-template>
