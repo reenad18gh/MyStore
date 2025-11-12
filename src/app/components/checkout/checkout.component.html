@@ -1,0 +1,20 @@
+<h2>Checkout</h2>
+
+<form #f="ngForm" (ngSubmit)="submit(f)">
+  <label>
+    Name
+    <input name="name" [(ngModel)]="name" required />
+  </label>
+
+  <label>
+    Address
+    <input name="address" [(ngModel)]="address" required minlength="5" />
+  </label>
+
+  <label>
+    Credit Card
+    <input name="creditCard" [(ngModel)]="creditCard" required pattern="^[0-9]{12,19}$" />
+  </label>
+
+  <button type="submit" [disabled]="!f.valid">Place Order</button>
+</form>
