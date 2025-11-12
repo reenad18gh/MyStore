@@ -1,0 +1,13 @@
+<div class="card">
+  <a [routerLink]="['/products', product.id]">
+    <img *ngIf="product.image" [src]="product.image" [alt]="product.name" />
+  </a>
+  <h4>{{ product.name }}</h4>
+  <p>{{ product.description }}</p>
+  <div class="row">
+    <span class="price">{{ product.price | currency:'SAR' }}</span>
+    <input type="number" min="1" [(ngModel)]="qty" />
+  </div>
+  <button (click)="addToCart()">Add to Cart</button>
+  <a class="link" [routerLink]="['/products', product.id]">View details</a>
+</div>
